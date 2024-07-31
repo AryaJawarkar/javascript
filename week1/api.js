@@ -35,13 +35,13 @@ var fs = require('fs');
 //Promises 
 
 function learnPromise() {
-    return new Promise(function(resolve){
-        fs.readFile(__dirname+"/a.txt","utf-8",function(err,data){
-            setTimeout(function(){
-                resolve(data)
-            },3000);      
-        });
-    })
+  return new Promise(function (resolve) {
+    fs.readFile(__dirname + "/a.txt", "utf-8", function (err, data) {
+      setTimeout(function () {
+        resolve(data)
+      }, 3000);
+    });
+  })
 }
 // function printP(data){
 //  console.log(data);
@@ -50,12 +50,11 @@ function learnPromise() {
 
 
 // let p = new Promise((resolve, reject) => {
-    
+
 // })
 
-async function printP(){
-    let data = await learnPromise();
-    console.log(data);
+async function printP() {
+  let data = await learnPromise(); console.log(data);
 }
 
 printP();
